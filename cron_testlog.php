@@ -72,6 +72,7 @@ class plugin_cron_testlog {
 }
 
 Ecjia_PluginManager::extend('cron_testlog', function() {
+    RC_Locale::loadPluginTextdomain('cron_testlog');
     require_once RC_Plugin::plugin_dir_path(__FILE__) . 'cron_testlog.class.php';
     return new cron_testlog();
 });
